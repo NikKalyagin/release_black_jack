@@ -11,6 +11,14 @@
   src: url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
 }*/
 
+@font-face {
+  font-family: 'Oi';
+  src: local('./fonts/Oi-Regular.ttf'), url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+}
+@font-face {
+  font-family: 'Press Start 2P';
+  src:  local('./fonts/PressStart2P-Regular.ttf'), url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
+}
 .app {
     background-image: url(./coinfall.gif);
     background-repeat: no-repeat;

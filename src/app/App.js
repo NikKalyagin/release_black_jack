@@ -3,6 +3,7 @@
 import "./styles.css";
 import "./app.css";
 import Image from 'next/image';
+//import './PressStart2P-Regular.ttf'
 //import WebFont from 'webfontloader';
 
 import { useState, useEffect } from "react";
