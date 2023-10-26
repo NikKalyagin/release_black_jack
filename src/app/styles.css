@@ -23,18 +23,16 @@
 /*таки подключаем шрифты. уже локально*/
 @font-face {
   font-family: 'Oi';
-  src: url('/public/Oi-Regular.woff2') format('woff2'),
-  url('/public/Oi-Regular.woff') format('woff'),
-  url('/public/Oi-Regular.ttf') format('truetype');
+  src: url('/Oi-Regular.woff2') format('woff2'),
+  url('/Oi-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Press Start 2P';
-  src: url('/public/PressStart2P-Regular.woff2') format('woff2'),
-  url('/public/PressStart2P-Regular.woff') format('woff'), 
-  url('/public/PressStart2P-Regular.ttf') format('truetype');
+  src: url('/PressStart2P-Regular.woff2') format('woff2'), 
+  url('/PressStart2P-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

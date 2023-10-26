@@ -3,7 +3,7 @@
 import "./styles.css";
 import "./app.css";
 import Image from 'next/image';
-//import '/Users/nikka/release_black_jack/public/Oi-Regular.woff';
+//import '/public/Oi-Regular.woff';
 //import WebFont from 'webfontloader';
 
 import { useState, useEffect } from "react";
