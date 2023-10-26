@@ -1,0 +1,123 @@
+/*шрифты*/
+@import url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+/*@font-face {
+  font-family: 'Oi';
+  src: url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+}
+
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
+}*/
+
+.app {
+    background-image: url(./coinfall.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw; /* 100% ширины окна браузера */
+    height: 100vh; /* 100% высоты окна браузера */
+    position: fixed; /* фиксированное положение, чтобы занимать всю область видимости */
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
+
+/**/
+.logoimage {
+    display: block; /* Установка изображения как блочного элемента для управления отступами */
+    margin: 50px auto 0; /* Отступы 50px сверху и автоматические отступы по горизонтали для центрирования */
+    text-align: center; /* Центрирование по горизонтали */
+  }
+  
+.ui-text-p {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+    width: 60%;
+    margin-left: 20%;
+}
+
+
+.start-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ui-input-money,
+.ui-input-name {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 5px solid  #FFCE58;
+  border-radius: 10px;
+  font-family: 'Press Start 2P';
+  font-size: 25px;
+  background-color: #B8C5EA;
+}
+
+.ui-input-money:focus {
+  background-color: lightblue;
+  border: 5px solid #FFCE58;
+}
+
+.ui-input-name:focus {
+  background-color: rgb(140, 118, 235);
+  border: 5px solid #FFCE58;
+}
+
+@media only screen and (max-width: 760px) {
+  .ui-input-money,
+  .ui-input-name {
+    width: 80%;;
+  }
+}
+/*ну очень красивая кнопка входа*/
+.buttonNav1 {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+  font-family: 'Press Start 2P';
+  padding: 5px;
+  width: 200px;
+  height: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 10px;
+  
+  
+}
+
+.buttonNav1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonNav1 span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonNav1:hover span {
+  padding-right: 25px;
+}
+
+.buttonNav1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*КОНЕЦ -- ну очень красивая кнопка входа*/

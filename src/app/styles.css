@@ -1,0 +1,313 @@
+/*тут правила для dealer.js*/
+/*шрифты*/
+@import url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+/*@font-face {
+  font-family: 'Oi';
+  src: url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+}
+
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
+}*/
+/*ну очень красивая кнопка входа*/
+.buttonNav {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+  font-family: 'Press Start 2P';
+  padding: 5px;
+  width: 200px;
+  height: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 10%;
+  margin-top: 10px;
+  
+  
+}
+
+.buttonNav span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonNav span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonNav:hover span {
+  padding-right: 25px;
+}
+
+.buttonNav:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*КОНЕЦ -- ну очень красивая кнопка входа*/
+/*Кнопочка для правил:*/
+.buttonRules {
+  display:block;
+  position: fixed;
+  border-radius: 10px;
+  background-color: coral;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Press Start 2P';
+  padding: 5px;
+  width: 200px;
+  height: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  right: 10.8%; 
+  top: 10px;
+  opacity: 0.2;
+}
+
+.buttonRules:hover {
+  opacity: 1;
+}
+
+.global {
+  font-size: 20px;
+}
+
+.game {
+  background-color: #B0DFE6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.container {
+  width: 80%; 
+  min-width: 10%;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items: center; 
+  margin-top: -40px;
+  margin-bottom: 30px;
+  overflow: auto;
+}
+
+
+.gameHello {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 3px solid black;
+  height: 450px;
+  font-family: 'Press Start 2P';
+  color: Teal;
+  text-align: center;
+  vertical-align:bottom;
+  font-size: 25px;
+}
+
+
+.ui-input-money {
+  max-width: 200px;
+}
+.ui-input-money:disabled {
+  background-color: #808080;
+}
+
+.statuszone {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.playerRight {
+  flex: 1;
+  border: 3px solid black;
+  padding: 10px;
+  margin-left: 5px;
+  font-family: 'Press Start 2P';
+  color: DarkSlateGray;
+  text-align: left;
+  vertical-align: top;
+  font-size: 20px;
+  height: 250px;
+}
+
+.dealerLeft {
+  flex: 1;
+  border: 3px solid black;
+  padding: 10px;
+  margin-right: 5px;
+  font-family: 'Press Start 2P';
+  color: gray;
+  text-align: left;
+  vertical-align: top;
+  font-size: 20px;
+  height: 250px;
+
+}
+
+.cards {
+  font-family: 'Oi';
+  color: black;
+  font-size: 25px;
+}
+
+/*для логотипа и кнопок внутри gameHello */
+.logoimage1 {
+  display: block; 
+  margin: 10px auto 0; 
+  text-align: center;
+}
+
+.gamebutton {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #FFCE58;
+  border: 2px solid black;
+  font-family: 'Press Start 2P';
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  width: 100px;
+  height: 50px;
+}
+
+.gamebutton:disabled {
+  background-color: #808080;
+}
+
+.buttonblock {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/*FINISH для логотипа и кнопок внутри gameHello */
+/*Media queries*/
+@media only screen and (max-width: 760px) {
+  .container {
+    margin-top: 40px;
+  }
+  
+  .gameHello {
+    height: auto;
+    margin-top: 40px;
+  }
+
+  
+}
+
+@media only screen and (max-width: 510px) {
+  .container {
+    margin-top: 60px;
+  }
+  
+  .gameHello {
+    height: auto;
+    margin-top: 60px;
+  }
+
+  .statuszone {
+    flex-direction: column;
+  }
+
+  .playerRight {
+    margin-top: 5px; /* Добавляет отступ между блоками при вертикальном расположении */
+  }
+
+  .dealerLeft {
+    margin-top: 5px; /* Добавляет отступ между блоками при вертикальном расположении */
+  }
+
+
+}
+/*ниже расположены правила для правила)*/
+.ruleContainer {
+  width: 80%; 
+  min-width: 10%;
+  max-width: 90%;
+  margin: 10px auto;
+  overflow: auto;
+  border: 3px solid black;
+  padding: 5px;
+}
+
+.h1 {
+  font-family: 'Press Start 2P';
+  color: navy;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.h2 {
+  font-family: 'Press Start 2P';
+  color: MediumSlateBlue;
+  text-align: left;
+  margin-left: 15px ;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.h1text {
+  font-family: 'Press Start 2P';
+  color: gray;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.h2text{
+  font-family: 'Press Start 2P';
+  color: MediumPurple;
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.h3text{
+  font-family: 'Press Start 2P';
+  color: MediumOrchid;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+.buttonexample {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #FFCE58;
+  border: 2px solid black;
+  font-family: 'Press Start 2P';
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  width: 100px;
+  height: 50px;
+  margin: 0 5px;
+}
+/*FINISH  правила для правила)*/
