@@ -27,7 +27,7 @@
   url('/Oi-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: 'Press Start 2P';
@@ -35,7 +35,7 @@
   url('/PressStart2P-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 /*ну очень красивая кнопка входа*/
 .buttonNav {
@@ -156,6 +156,7 @@
 }
 .ui-input-money:disabled {
   background-color: #808080;
+  border: 5px solid darkgray;
 }
 
 .statuszone {
@@ -248,11 +249,17 @@
 @media only screen and (max-width: 510px) {
   .container {
     margin-top: 60px;
+    width: 90%; 
+    min-width: 5%;
+    max-width: 95%;
+    
+    
   }
   
   .gameHello {
     height: auto;
     margin-top: 60px;
+    margin-bottom: 5px;
   }
 
   .statuszone {
@@ -260,11 +267,38 @@
   }
 
   .playerRight {
-    margin-top: 5px; /* Добавляет отступ между блоками при вертикальном расположении */
+    margin-top: 5px;
+    margin-right: 0px; 
+    margin-left: 0px;
   }
 
   .dealerLeft {
-    margin-top: 5px; /* Добавляет отступ между блоками при вертикальном расположении */
+    margin-top: 5px; 
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .buttonNav {
+    
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+    padding: 5px;
+    width: 140px;
+    height: 60px;
+    margin-left: 5%;
+    margin-top: 10px;
+  }
+
+  .buttonRules {
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+    padding: 5px;
+    width: 160px;
+    height: 60px;
+    
+    right: 5.8%; 
+    top: 10px;
+    
   }
 
 

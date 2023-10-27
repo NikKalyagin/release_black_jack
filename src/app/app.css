@@ -17,7 +17,7 @@
   url('/Oi-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: 'Press Start 2P';
@@ -25,7 +25,7 @@
   url('/PressStart2P-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 .app {
     background-image: url(./coinfall.gif);
