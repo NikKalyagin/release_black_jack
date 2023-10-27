@@ -28,6 +28,7 @@ export default function Dealer({ startes }) {
   const [playerLose, setPlayerLose] = useState(false);
   const [playerWin, setPlayerWin] = useState(false);
   const [loseCredit, setLoseCredit] = useState(false);
+  const [inputDisabled, setInputDisabled] = useState(false);
   //записать полученые пропсы
   useEffect(() => {
     setGotCredit(startes.money);
@@ -179,6 +180,14 @@ export default function Dealer({ startes }) {
   // Логика игры. Стартуем с КНОПКИ СТАРТ!
   // Про кнопку Старт: значение менее 1 пользователь не сможет ввести. Если у игрока мало денег - будет статус. Если у игрока нет денег чтобы удвоить ставку, то кнопка Дабл будет неактивна
 
+  useEffect(() => {
+    if (currentBid < 1) {
+      setButtonStart(true);
+    } else {
+      setButtonStart(false);
+    }
+  }, [currentBid]);
+
   function handleButtonStart() {
     if (
       gotCredit > 0 &&
@@ -190,7 +199,7 @@ export default function Dealer({ startes }) {
       getDealerCard();
       getPlayerCard();
       getPlayerCard();
-
+      setInputDisabled(true);
       setButtonDouble(false);
       setButtonStop(false);
       setButtonStart(true);
@@ -201,7 +210,7 @@ export default function Dealer({ startes }) {
       getDealerCard();
       getPlayerCard();
       getPlayerCard();
-
+      setInputDisabled(true);
       setButtonDouble(true);
       setButtonStop(false);
       setButtonStart(true);
@@ -339,6 +348,7 @@ export default function Dealer({ startes }) {
     setPlayerWin(false);
     setDealerLose(false);
     setDealerWin(false);
+    setInputDisabled(false);
   }
 
   // Ниже расположена отрисовка игры
@@ -367,12 +377,12 @@ export default function Dealer({ startes }) {
       <input
           type="number"
           className="ui-input-money"
-          placeholder="1"
-          disabled={buttonStart}
+          placeholder="Ставка"
+          disabled={inputDisabled}
           value={currentBid}
           onChange={(e) => {
             const value = e.target.value;
-            const newBid = value < 1 ? 1 : value;
+            const newBid = value < 0 ? 1 : value;
             setCurrentBid(newBid);
           }}
       />
