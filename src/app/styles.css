@@ -232,78 +232,7 @@
   margin-bottom: 20px;
 }
 /*FINISH для логотипа и кнопок внутри gameHello */
-/*Media queries*/
-@media only screen and (max-width: 760px) {
-  .container {
-    margin-top: 40px;
-  }
-  
-  .gameHello {
-    height: auto;
-    margin-top: 40px;
-  }
-
-  
-}
-
-@media only screen and (max-width: 510px) {
-  .container {
-    margin-top: 60px;
-    width: 90%; 
-    min-width: 5%;
-    max-width: 95%;
-    
-    
-  }
-  
-  .gameHello {
-    height: auto;
-    margin-top: 60px;
-    margin-bottom: 5px;
-  }
-
-  .statuszone {
-    flex-direction: column;
-  }
-
-  .playerRight {
-    margin-top: 5px;
-    margin-right: 0px; 
-    margin-left: 0px;
-  }
-
-  .dealerLeft {
-    margin-top: 5px; 
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  .buttonNav {
-    
-    font-size: 20px;
-    font-family: 'Press Start 2P';
-    padding: 5px;
-    width: 140px;
-    height: 60px;
-    margin-left: 5%;
-    margin-top: 10px;
-  }
-
-  .buttonRules {
-    font-size: 20px;
-    font-family: 'Press Start 2P';
-    padding: 5px;
-    width: 160px;
-    height: 60px;
-    
-    right: 5.8%; 
-    top: 10px;
-    
-  }
-
-
-}
-/*ниже расположены правила для правила)*/
+/*для контейнера с правилами*/
 .ruleContainer {
   width: 80%; 
   min-width: 10%;
@@ -313,6 +242,10 @@
   border: 3px solid black;
   padding: 5px;
 }
+
+
+/*ниже расположены правила для правила)*/
+
 
 .h1 {
   font-family: 'Press Start 2P';
@@ -371,3 +304,80 @@
   margin: 0 5px;
 }
 /*FINISH  правила для правила)*/
+
+/*Media queries*/
+@media only screen and (max-width: 760px) {
+  .container {
+    margin-top: 40px;
+  }
+  
+  .gameHello {
+    height: auto;
+    margin-top: 40px;
+  }
+
+  
+}
+
+@media only screen and (max-width: 510px) {
+  .container {
+    margin-top: 60px;
+    width: 90%; 
+    min-width: 5%;
+    max-width: 95%;
+    
+    
+  }
+  
+  .gameHello {
+    height: auto;
+    margin-top: 90px;
+    margin-bottom: 5px;
+  }
+
+  .statuszone {
+    flex-direction: column;
+  }
+
+  .playerRight {
+    margin-top: 5px;
+    margin-right: 0px; 
+    margin-left: 0px;
+  }
+
+  .dealerLeft {
+    margin-top: 5px; 
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .buttonNav {
+    
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+    padding: 5px;
+    width: 140px;
+    height: 60px;
+    margin-left: 5%;
+    margin-top: 10px;
+  }
+
+  .buttonRules {
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+    padding: 5px;
+    width: 160px;
+    height: 60px;
+    
+    right: 5.8%; 
+    top: 10px;
+    
+  }
+
+  .ruleContainer {
+    width: 90%; 
+    min-width: 5%;
+    max-width: 95%;
+  }
+
+}
