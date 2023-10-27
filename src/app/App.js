@@ -28,7 +28,7 @@ useEffect(() => {
 */
   const handleInputChange = (e) => {
     const input = e.target.value;
-    if (!isNaN(input)) {
+    if (!isNaN(input) && input > 0 && input < 1000000) {
       setStartes({ ...startes, money: input });
     }
   };
@@ -58,13 +58,18 @@ useEffect(() => {
           <div className="start-block">
             <input
               className="ui-input-money"
+              type="number"
               placeholder="Введи количество монеток"
+              min="10"
+              max="1000000"
+              step="1"
               value={startes.money}
               onChange={handleInputChange}
             />
             
             <input
               className="ui-input-name"
+              type="text"
               placeholder="Имя"
               value={startes.name}
               onChange={(e) => setStartes({ ...startes, name: e.target.value })}
