@@ -109,9 +109,7 @@
   opacity: 1;
 }
 
-.global {
-  font-size: 20px;
-}
+
 
 .game {
   background-color: #B0DFE6;
@@ -326,14 +324,36 @@
     width: 90%; 
     min-width: 5%;
     max-width: 95%;
-    
-    
+  }
+
+  .cards {
+    font-size: 18px;
+  }
+
+  .bidmobile {
+    font-size: 12px;
+  }
+
+  .buttonblock {
+    margin-top: 5px;
+    margin-bottom: 1px;
+  }
+
+  .logoimage1 {
+    display: none;
+    z-index: -1;
+  }
+
+  .gameHello .hellomobile {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   
   .gameHello {
     height: auto;
     margin-top: 280px;
     margin-bottom: 5px;
+    font-size: 20px;
   }
 
   .statuszone {
@@ -344,12 +364,14 @@
     margin-top: 5px;
     margin-right: 0px; 
     margin-left: 0px;
+    font-size: 16px;
   }
 
   .dealerLeft {
     margin-top: 5px; 
     margin-left: 0px;
     margin-right: 0px;
+    font-size: 16px;
   }
 
   .buttonNav {
@@ -379,6 +401,18 @@
     width: 90%; 
     min-width: 5%;
     max-width: 95%;
+  }
+
+  .ui-input-money {
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+
+  .gamebutton {
+    font-size: 12px;
+    margin-bottom: 5px;
+    width: 90px;
+    height: 30px;
   }
 
 }

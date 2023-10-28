@@ -372,8 +372,8 @@ export default function Dealer({ startes }) {
       <div className="gameHello">
       <Image className="logoimage1" src="/logo.jpg" width={200}
         height={200} alt="background" />
-      <h2>Привет, {startes.name}</h2>
-      <p>Начальная ставка от 1 $</p>
+      <h2 className="hellomobile">Привет, {startes.name}</h2>
+      <p className="bidmobile">Начальная ставка от 1 $</p>
       <input
           type="number"
           className="ui-input-money"
