@@ -1,11 +1,8 @@
 //Dealer.js
-/*- 3-я попытка- Функция перессчета общей суммы заменена на useEffect
-- useEffect применен для игры дилера
-- стабильная версия*/
 import "./styles.css";
 import Image from 'next/image';
 import { useState, useEffect } from "react";
-//
+
 export default function Dealer({ startes }) {
   const [dealerCards, setDealerCards] = useState([]);
   const [playerCards, setPlayerCards] = useState([]);
@@ -29,12 +26,12 @@ export default function Dealer({ startes }) {
   const [playerWin, setPlayerWin] = useState(false);
   const [loseCredit, setLoseCredit] = useState(false);
   const [inputDisabled, setInputDisabled] = useState(false);
-  //записать полученые пропсы
+  //write gotten props
   useEffect(() => {
     setGotCredit(startes.money);
   }, [startes.money]);
-  //получение карт игрока и дилера -->
-  // 1) функция создания карты дилера
+  //BLOCK for get Player, Dealer card -->
+  // 1) Function to create Dealer card
   const getDealerCard = () => {
     const cards = [
       "2",
@@ -63,7 +60,7 @@ export default function Dealer({ startes }) {
       return [...prevDealerCards, newDCard];
     });
   };
-  // 2) функция создания карты игрока
+  // 2) Function to create Player card
   const getPlayerCard = () => {
     const cards = [
       "2",
@@ -92,8 +89,8 @@ export default function Dealer({ startes }) {
       return [...prevPlayerCards, newPCard];
     });
   };
-  //закончена функция создания карт
-  //функция пересчета текста в значение: Дилер
+  //FINISH BLOCK for get Player, Dealer card
+  //text to number: dealer
   useEffect(() => {
     let aceCount = 0;
     let score = 0;
@@ -120,7 +117,7 @@ export default function Dealer({ startes }) {
     setDealerScore(score);
   }, [dealerCards]);
 
-  // функция пересчета текста в значение: Игрок
+  // text to number: player
   useEffect(() => {
     let aceCount = 0;
     let score = 0;
@@ -147,8 +144,8 @@ export default function Dealer({ startes }) {
     setPlayerScore(score);
   }, [playerCards]);
 
-  //функция добора дилером карт (триггер - кнопка стоп). Дилер добирает карты и обсчитывает их через useEffect, который самотриггерится по: 1) статусу, что дилер играет,2) по росту счета дилера. Если счет дилера 16 и более, то эффект триггерится, но меняется статус "игра дилера", что перестает вызывать эффект
-  //useEffect(() => {},[])  заготовка useEffect
+  /*function of drawing cards by the dealer (trigger - stop button). The dealer draws cards and calculates them through useEffect, which is self-triggered by: 1) the status that the dealer is playing, 2) the growth of the dealer’s account. If the dealer's score is 16 or more, then the effect is triggered, but the "dealer's play" status changes, which stops causing the effect*/
+  //useEffect(() => {},[]) - useEffect
   useEffect(() => {
     if (dealerPlaying && dealerScore < 16) {
       getDealerCard();
@@ -176,9 +173,9 @@ export default function Dealer({ startes }) {
       setDealerPlaying(false);
     }
   }, [dealerScore, dealerPlaying]);
-  // Итог кода выше: Есть функции получения карт дилера, игрока. Обсчет счета происходит по триггеру получения новой карты, через useEffect
-  // Логика игры. Стартуем с КНОПКИ СТАРТ!
-  // Про кнопку Старт: значение менее 1 пользователь не сможет ввести. Если у игрока мало денег - будет статус. Если у игрока нет денег чтобы удвоить ставку, то кнопка Дабл будет неактивна
+  /* Summary of the code above: There are functions for receiving dealer and player cards. The account is calculated based on the trigger of receiving a new card, through useEffect
+   // Game logic. Let's start with the START BUTTON!
+   // About the Start button: the user will not be able to enter a value less than 1. If the player has little money, there will be status. If the player does not have money to double the bet, the Double button will be inactive */
 
   useEffect(() => {
     if (currentBid < 1) {
@@ -234,7 +231,7 @@ export default function Dealer({ startes }) {
     handleButtonStop();
   }
 
-  //Функция для определения статусов игроков. Тут происходит важная механика игры. Игрок играет сам, до дилера. Если у игрока "перебор", то кнопка Стоп деактивируется. И дилер играть уже не будет (это не важно - игрок проиграл). При это показывается скрытая карта дилера, чтобы понять что игра была честной
+  /*Function for determining player statuses. This is where some important game mechanics happen. The player plays himself, before the dealer. If the player has “overkill”, then the Stop button is deactivated. And the dealer will no longer play (it doesn’t matter - the player has lost). When this happens, the dealer’s hidden card is shown to understand that the game was fair*/
   useEffect(() => {
     if (playerScore === 21) {
       setPlayerBlackJack(true);
@@ -285,25 +282,8 @@ export default function Dealer({ startes }) {
     }
   }, [playerScore, dealerScore, buttonStop]);
 
-  // функция для определения выплат (старая, работала плохо)
-  /*function loseOrWin() {
-    if (playerLose === true) {
-      const bid = parseInt(currentBid);
-      setGotCredit((prevCredit) => parseInt(prevCredit) - bid);
-    }
-    if (dealerLose === true && playerBlackJack === false) {
-      const bid = parseInt(currentBid);
-      setGotCredit((prevCredit) => parseInt(prevCredit) + bid);
-    }
-    if (playerBlackJack === true && dealerBlackJack === false) {
-      const bid = parseInt(currentBid);
-      setGotCredit(
-        (prevCredit) =>
-          parseFloat(prevCredit) + parseFloat(((bid / 2) * 3).toFixed(2))
-      );
-    }
-  }*/
-  //функция для корректного рассчета выплат (десятичные)
+  
+  //function for correct calculation of payments (decimal)
   function loseOrWin() {
     if (playerLose === true) {
       const bid = parseFloat(currentBid);
@@ -327,7 +307,6 @@ export default function Dealer({ startes }) {
     setButtonHit(true);
     setButtonStop(true);
     setDealerPlaying(true);
-
     setButtonNext(false);
     setHiddenSecCard(true);
   }
@@ -351,8 +330,8 @@ export default function Dealer({ startes }) {
     setInputDisabled(false);
   }
 
-  // Ниже расположена отрисовка игры
-  // функция замены карт для финального вывода:
+  // GAME ----
+  // for final render:
   const prettyPrintCards = (card) => {
     const mapSuits = {
       пики: "♠",

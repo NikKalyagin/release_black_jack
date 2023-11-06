@@ -1,16 +1,3 @@
-/*шрифты
-@import url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
-/*@font-face {
-  font-family: 'Oi';
-  src: url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
-}
-
-@font-face {
-  font-family: 'Press Start 2P';
-  src: url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
-}*/
-
 @font-face {
   font-family: 'Oi';
   src: url('/Oi-Regular.woff2') format('woff2'),
@@ -31,19 +18,18 @@
     background-image: url(./coinfall.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw; /* 100% ширины окна браузера */
-    height: 100vh; /* 100% высоты окна браузера */
-    position: fixed; /* фиксированное положение, чтобы занимать всю область видимости */
+    width: 100vw; 
+    height: 100vh; 
+    position: fixed;
     top: 0;
     left: 0;
     overflow: auto;
   }
 
-/**/
 .logoimage {
-    display: block; /* Установка изображения как блочного элемента для управления отступами */
-    margin: 50px auto 0; /* Отступы 50px сверху и автоматические отступы по горизонтали для центрирования */
-    text-align: center; /* Центрирование по горизонтали */
+    display: block; 
+    margin: 50px auto 0; 
+    text-align: center; 
   }
   
 .ui-text-p {
@@ -56,7 +42,6 @@
     width: 60%;
     margin-left: 20%;
 }
-
 
 .start-block {
   display: flex;
@@ -91,7 +76,7 @@
     width: 80%;;
   }
 }
-/*ну очень красивая кнопка входа*/
+/*pretty button to login...My precious...*/
 .buttonNav1 {
   display: inline-block;
   border-radius: 10px;
@@ -107,9 +92,7 @@
   height: 80px;
   transition: all 0.5s;
   cursor: pointer;
-  margin-top: 10px;
-  
-  
+  margin-top: 10px; 
 }
 
 .buttonNav1 span {
@@ -136,7 +119,7 @@
   opacity: 1;
   right: 0;
 }
-/*КОНЕЦ -- ну очень красивая кнопка входа*/
+/*FIN pretty button to login*/
 
 @media only screen and (max-width: 510px) {
   .ui-text-p {
@@ -144,5 +127,4 @@
     width: 90%;
     margin-left: 5%;
 }
-
 }

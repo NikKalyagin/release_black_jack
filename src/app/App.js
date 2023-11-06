@@ -3,9 +3,6 @@
 import "./styles.css";
 import "./app.css";
 import Image from 'next/image';
-//import '/public/Oi-Regular.woff';
-//import WebFont from 'webfontloader';
-
 import { useState, useEffect } from "react";
 import Player from "./Player.js";
 
@@ -16,16 +13,6 @@ export default function App() {
     name: ""
   });
 
-
-/*загружаем шрифт. Вернее, уже Не загружаем)
-useEffect(() => {
-  WebFont.load({
-    google: {
-      families: ['Oi', 'Press Start 2P']
-    }
-  });
- }, []);
-*/
   const handleInputChange = (e) => {
     const input = e.target.value;
     if (!isNaN(input) && input > 0 && input < 1000000) {

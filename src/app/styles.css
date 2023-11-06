@@ -1,26 +1,4 @@
-/*тут правила для dealer.js*/
-/*шрифты
-@import url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
-/*@font-face {
-  font-family: 'Oi';
-  src: url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
-}
-
-@font-face {
-  font-family: 'Press Start 2P';
-  src: url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
-}
-
-@font-face {
-  font-family: 'Oi';
-  src: local('./public/Oi-Regular.ttf'), url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
-}
-@font-face {
-  font-family: 'Press Start 2P';
-  src:  local('./public/PressStart2P-Regular.ttf'), url('https://fonts.googleapis.com/css2?family=Oi&family=Press+Start+2P&display=swap');
-}*/
-/*таки подключаем шрифты. уже локально*/
+/*Add the saved fonts. Finally)))*/
 @font-face {
   font-family: 'Oi';
   src: url('/Oi-Regular.woff2') format('woff2'),
@@ -37,7 +15,7 @@
   font-style: normal;
   font-display: block;
 }
-/*ну очень красивая кнопка входа*/
+/*pretty button to navigate...My precious...*/
 .buttonNav {
   display: inline-block;
   border-radius: 10px;
@@ -55,8 +33,6 @@
   cursor: pointer;
   margin-left: 10%;
   margin-top: 10px;
-  
-  
 }
 
 .buttonNav span {
@@ -83,8 +59,9 @@
   opacity: 1;
   right: 0;
 }
-/*КОНЕЦ -- ну очень красивая кнопка входа*/
-/*Кнопочка для правил:*/
+/*FIN pretty button to navigate*/
+
+/*Button for rules:*/
 .buttonRules {
   display:block;
   position: fixed;
@@ -109,8 +86,6 @@
   opacity: 1;
 }
 
-
-
 .game {
   background-color: #B0DFE6;
   height: 100vh;
@@ -131,7 +106,6 @@
   align-items: center; 
   margin-top: -40px;
   margin-bottom: 30px;
-  /*overflow: auto;*/
 }
 
 
@@ -147,7 +121,6 @@
   vertical-align:bottom;
   font-size: 25px;
 }
-
 
 .ui-input-money {
   max-width: 200px;
